@@ -4,13 +4,13 @@ using static LanguageExt.Prelude;
 
 namespace LangExtCond.Tests;
 
-public class UnitTest1
+public class CondTests
 {
     private readonly ITestOutputHelper testOutput;
 
     public record DueNumeri(int First, int Second);
 
-    public UnitTest1(ITestOutputHelper testOutput)
+    public CondTests(ITestOutputHelper testOutput)
     {
         this.testOutput = testOutput;
     }
