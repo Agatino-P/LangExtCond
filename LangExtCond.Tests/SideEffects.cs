@@ -1,9 +1,9 @@
-﻿using LanguageExt;
-using static LanguageExt.Prelude;
+﻿//using LanguageExt;
+//using static LanguageExt.Prelude;
 
 
-namespace LangExtCond.Tests;
-internal class SideEffects
-{
-    IO<int>
-}
+//namespace LangExtCond.Tests;
+//internal class SideEffects
+//{
+//    IO<int>
+//}
