@@ -47,6 +47,7 @@ public class Playaround
 
     private async Task<Either<string, int>> SomeAsyncService(int i)
     {
+        await Task.CompletedTask;
         int a = 1;
         return i < 0 ? Prelude.Left<string, int>("<0") : Prelude.Right(i);
     }
@@ -54,6 +55,8 @@ public class Playaround
     [Fact]
     public async Task FromTaskToAsync()
     {
+        await Task.CompletedTask;
+
         Task<Either<string, int>> serviceReturn = SomeAsyncService(2);
 
         EitherAsync<string, int> ea = serviceReturn.ToAsync();
