@@ -37,19 +37,27 @@ public class Trans
 
     private async Task<string> Step1a(string s)
     {
-
+        await Task.CompletedTask;
         return s + "..";
     }
 
 
     private async Task<Either<int, Unit>> Step2(string s)
     {
+        await Task.CompletedTask;
         if (string.IsNullOrWhiteSpace(s))
+        {
             return -1;
+        }
+
         return Unit.Default;
     }
 
-    private async Task<EitherAsync<int, string>> SrvEA(string s) => s;
+    private async Task<EitherAsync<int, string>> SrvEA(string s)
+    {
+        await Task.CompletedTask;
+        return s;
+    }
 
     [Fact]
     private void TestDebug()
@@ -57,8 +65,11 @@ public class Trans
         var ea = SrvEA("m");
     }
 
-    private async Task<string> SrvGetString(string s) => s;
-
+    private async Task<string> SrvGetString(string s)
+    {
+        await Task.CompletedTask;
+        return s;
+    }
 }
 
 
